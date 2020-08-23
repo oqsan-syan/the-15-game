@@ -70,16 +70,6 @@ arr.forEach((item, index, array) => {
 });
 
 
-    //  let alertBox = document.createElement('div');
-    //  let btn = document.createElement('button');
-    //  alertBox.classList.add('alert');
-    //  btn.classList.add('btn');
-    //  header.appendChild(alertBox);
-    //  header.appendChild(btn);
-    //  alertBox.textContent = "Congratulations, You Won!!!";
-    //  btn.textContent = 'start again';
-    //  btn.addEventListener('click', () => {window.location.reload()} );
-
 
 
 
