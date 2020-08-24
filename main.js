@@ -30,14 +30,12 @@ for(let j = 0; j < arr.length; j++) {
 }
 
 // Event 
-let empCols = document.querySelectorAll('.empty');
-
 arr.forEach((item, index, array) => {
 
   item.addEventListener('click', function (e) {
 
   item.setAttribute('data-index', index);
-    if(empCols.length == 1 && (array[index - 1] && array[index - 1].classList.contains('empty')) || (array[index + 1] && array[index + 1].classList.contains('empty')) || (array[index + 4] && array[index + 4].classList.contains('empty')) || (array[index - 4] && array[index - 4].classList.contains('empty'))) {
+    if((array[index - 1] && array[index - 1].classList.contains('empty')) || (array[index + 1] && array[index + 1].classList.contains('empty')) || (array[index + 4] && array[index + 4].classList.contains('empty')) || (array[index - 4] && array[index - 4].classList.contains('empty'))) {
       let emptyCol = document.querySelector('.empty');
       emptyCol.innerHTML = array[e.target.getAttribute('data-index')].innerHTML;
       emptyCol.classList.remove('empty');
@@ -68,8 +66,6 @@ arr.forEach((item, index, array) => {
    } 
   });
 });
-
-
 
 
 
