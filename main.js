@@ -30,14 +30,12 @@ for(let j = 0; j < arr.length; j++) {
 }
 
 // Event 
-let empCols = document.querySelectorAll('.empty');
-
 arr.forEach((item, index, array) => {
 
   item.addEventListener('click', function (e) {
 
   item.setAttribute('data-index', index);
-    if(empCols.length == 1 && (array[index - 1] && array[index - 1].classList.contains('empty')) || (array[index + 1] && array[index + 1].classList.contains('empty')) || (array[index + 4] && array[index + 4].classList.contains('empty')) || (array[index - 4] && array[index - 4].classList.contains('empty'))) {
+    if((array[index - 1] && array[index - 1].classList.contains('empty')) || (array[index + 1] && array[index + 1].classList.contains('empty')) || (array[index + 4] && array[index + 4].classList.contains('empty')) || (array[index - 4] && array[index - 4].classList.contains('empty'))) {
       let emptyCol = document.querySelector('.empty');
       emptyCol.innerHTML = array[e.target.getAttribute('data-index')].innerHTML;
       emptyCol.classList.remove('empty');
@@ -70,15 +68,15 @@ arr.forEach((item, index, array) => {
 });
 
 
-     let alertBox = document.createElement('div');
-     let btn = document.createElement('button');
-     alertBox.classList.add('alert');
-     btn.classList.add('btn');
-     header.appendChild(alertBox);
-     header.appendChild(btn);
-     alertBox.textContent = "Congratulations, You Won!!!";
-     btn.textContent = 'start again';
-     btn.addEventListener('click', () => {window.location.reload()} );
+  let alertBox = document.createElement('div');
+  let btn = document.createElement('button');
+  alertBox.classList.add('alert');
+  btn.classList.add('btn');
+  header.appendChild(alertBox);
+  header.appendChild(btn);
+  alertBox.textContent = "Congratulations, You Won!!!";
+  btn.textContent = 'start again';
+  btn.addEventListener('click', () => {window.location.reload()} );
 
 
 

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.header {
+  text-align: center;
+}
+
 .title {
   margin: 25px 0;
   text-align: center;
@@ -43,7 +47,6 @@
   box-shadow: 14px 23px 26px rgba(0, 0, 0, 0.3);
 }
 
-
 .col {
   background: #ffc0a1;
   width: 100%;
@@ -54,14 +57,16 @@
   font-weight: bold;
   font-size: 40px;
   cursor: pointer;
+  transition: .2s ease-in;
 }
 
-.empty {
+.col:hover {
+  background: rgba(255, 192, 161, 0.7)
+}
+
+.empty,
+.col.empty:hover {
   background: unset;
-}
-
-.header {
-  text-align: center;
 }
 
 .alert {
@@ -70,6 +75,14 @@
   font-size: 40px;
   font-weight: 600;
   text-align: center;
+  animation-name: alertanimation;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes alertanimation {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .btn {
@@ -78,14 +91,28 @@
   text-align: center;
   margin-top: 20px;
   margin: 0 auto;
-  width: 200px;
+  width: 190px;
   height: 70px;
   background-color: #ffc0a1;
   color: #333;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   outline: none;
   border: none;
+  border-radius: 6%;
+  transition: .2s ease-in;
+  animation-name: btnanimation;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+@keyframes btnanimation { 
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.btn:hover {
+  background-color: rgba(255, 192, 161, 0.7);
 }
 
 /* Media */
@@ -138,7 +165,7 @@
     font-size: 35px;
   }
   .btn {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
   }
 }
