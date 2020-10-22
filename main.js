@@ -53,7 +53,7 @@ arr.forEach((item, index, array) => {
   counter.textContent = count; 
 
   //  Alert win message
-  if(console.log(JSON.stringify(newArr)==JSON.stringify(winArr))) {
+  if(JSON.stringify(newArr)==JSON.stringify(winArr)) {
     let alertBox = document.createElement('div');
     let btn = document.createElement('button');
     alertBox.classList.add('alert');
